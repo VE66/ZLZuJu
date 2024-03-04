@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,29 +13,21 @@
 		3D2D8D1C2B92CE030028BE07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2D8D1A2B92CE030028BE07 /* Main.storyboard */; };
 		3D2D8D1E2B92CE040028BE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D2D8D1D2B92CE040028BE07 /* Assets.xcassets */; };
 		3D2D8D212B92CE040028BE07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2D8D1F2B92CE040028BE07 /* LaunchScreen.storyboard */; };
-		3D2D8D2C2B92CE040028BE07 /* ZLZuJuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D2B2B92CE040028BE07 /* ZLZuJuTests.swift */; };
-		3D2D8D362B92CE040028BE07 /* ZLZuJuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D352B92CE040028BE07 /* ZLZuJuUITests.swift */; };
-		3D2D8D382B92CE040028BE07 /* ZLZuJuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D372B92CE040028BE07 /* ZLZuJuUITestsLaunchTests.swift */; };
+		3D2D8D4B2B92D95F0028BE07 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D4A2B92D95F0028BE07 /* UIColor+Ex.swift */; };
+		3D2D8D4D2B92D9CA0028BE07 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D4C2B92D9CA0028BE07 /* String+Ex.swift */; };
+		3D2D8D4F2B92DA960028BE07 /* ZJListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D4E2B92DA960028BE07 /* ZJListViewController.swift */; };
+		3D2D8D512B92DAE60028BE07 /* ZJListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D502B92DAE60028BE07 /* ZJListView.swift */; };
+		3D2D8D542B92DB2B0028BE07 /* ZJListManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D532B92DB2B0028BE07 /* ZJListManger.swift */; };
+		3D2D8D562B92DC950028BE07 /* ZJTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D552B92DC950028BE07 /* ZJTableViewCell.swift */; };
+		3D2D8D582B92DE4B0028BE07 /* ZJListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D8D572B92DE4B0028BE07 /* ZJListModel.swift */; };
+		3DD5E0512B95FD3A005A0431 /* UIFont+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5E0502B95FD3A005A0431 /* UIFont+Ex.swift */; };
+		5A8C6E0B5357ACCFC20BD529 /* Pods_ZLZuJu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A83B052C60DCA0D605E5147 /* Pods_ZLZuJu.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3D2D8D282B92CE040028BE07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D2D8D092B92CE030028BE07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3D2D8D102B92CE030028BE07;
-			remoteInfo = ZLZuJu;
-		};
-		3D2D8D322B92CE040028BE07 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D2D8D092B92CE030028BE07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3D2D8D102B92CE030028BE07;
-			remoteInfo = ZLZuJu;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		053F9F6E9AF1FC130FF66D36 /* Pods-ZLZuJuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLZuJuTests.debug.xcconfig"; path = "Target Support Files/Pods-ZLZuJuTests/Pods-ZLZuJuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		068D06F2A18EDB665212E103 /* Pods-ZLZuJuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLZuJuTests.release.xcconfig"; path = "Target Support Files/Pods-ZLZuJuTests/Pods-ZLZuJuTests.release.xcconfig"; sourceTree = "<group>"; };
+		166E07240CAEF52BB45A7AB0 /* Pods-ZLZuJu-ZLZuJuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLZuJu-ZLZuJuUITests.release.xcconfig"; path = "Target Support Files/Pods-ZLZuJu-ZLZuJuUITests/Pods-ZLZuJu-ZLZuJuUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3D2D8D112B92CE030028BE07 /* ZLZuJu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLZuJu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2D8D142B92CE030028BE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D2D8D162B92CE030028BE07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,11 +36,23 @@
 		3D2D8D1D2B92CE040028BE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D2D8D202B92CE040028BE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D2D8D222B92CE040028BE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D2D8D272B92CE040028BE07 /* ZLZuJuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZLZuJuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2D8D2B2B92CE040028BE07 /* ZLZuJuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLZuJuTests.swift; sourceTree = "<group>"; };
-		3D2D8D312B92CE040028BE07 /* ZLZuJuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZLZuJuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2D8D352B92CE040028BE07 /* ZLZuJuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLZuJuUITests.swift; sourceTree = "<group>"; };
 		3D2D8D372B92CE040028BE07 /* ZLZuJuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLZuJuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3D2D8D4A2B92D95F0028BE07 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
+		3D2D8D4C2B92D9CA0028BE07 /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
+		3D2D8D4E2B92DA960028BE07 /* ZJListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJListViewController.swift; sourceTree = "<group>"; };
+		3D2D8D502B92DAE60028BE07 /* ZJListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJListView.swift; sourceTree = "<group>"; };
+		3D2D8D532B92DB2B0028BE07 /* ZJListManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJListManger.swift; sourceTree = "<group>"; };
+		3D2D8D552B92DC950028BE07 /* ZJTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJTableViewCell.swift; sourceTree = "<group>"; };
+		3D2D8D572B92DE4B0028BE07 /* ZJListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJListModel.swift; sourceTree = "<group>"; };
+		3DD5E0502B95FD3A005A0431 /* UIFont+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ex.swift"; sourceTree = "<group>"; };
+		621761BD61919629B9FEEF77 /* Pods-ZLZuJu-ZLZuJuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLZuJu-ZLZuJuUITests.debug.xcconfig"; path = "Target Support Files/Pods-ZLZuJu-ZLZuJuUITests/Pods-ZLZuJu-ZLZuJuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		716A27B3ACA0255C92839B98 /* Pods-ZLZuJu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLZuJu.release.xcconfig"; path = "Target Support Files/Pods-ZLZuJu/Pods-ZLZuJu.release.xcconfig"; sourceTree = "<group>"; };
+		8A83B052C60DCA0D605E5147 /* Pods_ZLZuJu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLZuJu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F12CA5AB11B765133B82097 /* Pods-ZLZuJu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLZuJu.debug.xcconfig"; path = "Target Support Files/Pods-ZLZuJu/Pods-ZLZuJu.debug.xcconfig"; sourceTree = "<group>"; };
+		AC5A8E91A30A5A4024F88904 /* Pods_ZLZuJuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLZuJuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CABC2F6CA1E31EF98B2B3404 /* Pods_ZLZuJu_ZLZuJuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLZuJu_ZLZuJuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,26 +60,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D2D8D242B92CE040028BE07 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D2D8D2E2B92CE040028BE07 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5A8C6E0B5357ACCFC20BD529 /* Pods_ZLZuJu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27A4C1F50799E3D43EC53C2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A83B052C60DCA0D605E5147 /* Pods_ZLZuJu.framework */,
+				CABC2F6CA1E31EF98B2B3404 /* Pods_ZLZuJu_ZLZuJuUITests.framework */,
+				AC5A8E91A30A5A4024F88904 /* Pods_ZLZuJuTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3D2D8D082B92CE030028BE07 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +84,8 @@
 				3D2D8D2A2B92CE040028BE07 /* ZLZuJuTests */,
 				3D2D8D342B92CE040028BE07 /* ZLZuJuUITests */,
 				3D2D8D122B92CE030028BE07 /* Products */,
+				DDA98A07579106EA052ED583 /* Pods */,
+				27A4C1F50799E3D43EC53C2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				3D2D8D112B92CE030028BE07 /* ZLZuJu.app */,
-				3D2D8D272B92CE040028BE07 /* ZLZuJuTests.xctest */,
-				3D2D8D312B92CE040028BE07 /* ZLZuJuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +103,7 @@
 				3D2D8D142B92CE030028BE07 /* AppDelegate.swift */,
 				3D2D8D162B92CE030028BE07 /* SceneDelegate.swift */,
 				3D2D8D182B92CE030028BE07 /* ViewController.swift */,
+				3D2D8D442B92D8800028BE07 /* ZuJuGroup */,
 				3D2D8D1A2B92CE030028BE07 /* Main.storyboard */,
 				3D2D8D1D2B92CE040028BE07 /* Assets.xcassets */,
 				3D2D8D1F2B92CE040028BE07 /* LaunchScreen.storyboard */,
@@ -127,6 +129,82 @@
 			path = ZLZuJuUITests;
 			sourceTree = "<group>";
 		};
+		3D2D8D442B92D8800028BE07 /* ZuJuGroup */ = {
+			isa = PBXGroup;
+			children = (
+				3D2D8D522B92DB0D0028BE07 /* Managers */,
+				3D2D8D492B92D8B90028BE07 /* Extensions */,
+				3D2D8D482B92D8AE0028BE07 /* Tools */,
+				3D2D8D472B92D89F0028BE07 /* Models */,
+				3D2D8D462B92D89A0028BE07 /* Views */,
+				3D2D8D452B92D88E0028BE07 /* ViewControllers */,
+			);
+			path = ZuJuGroup;
+			sourceTree = "<group>";
+		};
+		3D2D8D452B92D88E0028BE07 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D2D8D4E2B92DA960028BE07 /* ZJListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3D2D8D462B92D89A0028BE07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D2D8D502B92DAE60028BE07 /* ZJListView.swift */,
+				3D2D8D552B92DC950028BE07 /* ZJTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3D2D8D472B92D89F0028BE07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D2D8D572B92DE4B0028BE07 /* ZJListModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D2D8D482B92D8AE0028BE07 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		3D2D8D492B92D8B90028BE07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D2D8D4A2B92D95F0028BE07 /* UIColor+Ex.swift */,
+				3D2D8D4C2B92D9CA0028BE07 /* String+Ex.swift */,
+				3DD5E0502B95FD3A005A0431 /* UIFont+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D2D8D522B92DB0D0028BE07 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3D2D8D532B92DB2B0028BE07 /* ZJListManger.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DDA98A07579106EA052ED583 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F12CA5AB11B765133B82097 /* Pods-ZLZuJu.debug.xcconfig */,
+				716A27B3ACA0255C92839B98 /* Pods-ZLZuJu.release.xcconfig */,
+				621761BD61919629B9FEEF77 /* Pods-ZLZuJu-ZLZuJuUITests.debug.xcconfig */,
+				166E07240CAEF52BB45A7AB0 /* Pods-ZLZuJu-ZLZuJuUITests.release.xcconfig */,
+				053F9F6E9AF1FC130FF66D36 /* Pods-ZLZuJuTests.debug.xcconfig */,
+				068D06F2A18EDB665212E103 /* Pods-ZLZuJuTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D2D8D3B2B92CE040028BE07 /* Build configuration list for PBXNativeTarget "ZLZuJu" */;
 			buildPhases = (
+				68642D565A76A8C1341CDCCB /* [CP] Check Pods Manifest.lock */,
 				3D2D8D0D2B92CE030028BE07 /* Sources */,
 				3D2D8D0E2B92CE030028BE07 /* Frameworks */,
 				3D2D8D0F2B92CE030028BE07 /* Resources */,
+				86E5B6AC4870FB72A54D118B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,42 +226,6 @@
 			productName = ZLZuJu;
 			productReference = 3D2D8D112B92CE030028BE07 /* ZLZuJu.app */;
 			productType = "com.apple.product-type.application";
-		};
-		3D2D8D262B92CE040028BE07 /* ZLZuJuTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3D2D8D3E2B92CE040028BE07 /* Build configuration list for PBXNativeTarget "ZLZuJuTests" */;
-			buildPhases = (
-				3D2D8D232B92CE040028BE07 /* Sources */,
-				3D2D8D242B92CE040028BE07 /* Frameworks */,
-				3D2D8D252B92CE040028BE07 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3D2D8D292B92CE040028BE07 /* PBXTargetDependency */,
-			);
-			name = ZLZuJuTests;
-			productName = ZLZuJuTests;
-			productReference = 3D2D8D272B92CE040028BE07 /* ZLZuJuTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3D2D8D302B92CE040028BE07 /* ZLZuJuUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3D2D8D412B92CE040028BE07 /* Build configuration list for PBXNativeTarget "ZLZuJuUITests" */;
-			buildPhases = (
-				3D2D8D2D2B92CE040028BE07 /* Sources */,
-				3D2D8D2E2B92CE040028BE07 /* Frameworks */,
-				3D2D8D2F2B92CE040028BE07 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3D2D8D332B92CE040028BE07 /* PBXTargetDependency */,
-			);
-			name = ZLZuJuUITests;
-			productName = ZLZuJuUITests;
-			productReference = 3D2D8D312B92CE040028BE07 /* ZLZuJuUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -196,18 +240,10 @@
 					3D2D8D102B92CE030028BE07 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
-					3D2D8D262B92CE040028BE07 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 3D2D8D102B92CE030028BE07;
-					};
-					3D2D8D302B92CE040028BE07 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 3D2D8D102B92CE030028BE07;
-					};
 				};
 			};
 			buildConfigurationList = 3D2D8D0C2B92CE030028BE07 /* Build configuration list for PBXProject "ZLZuJu" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -220,8 +256,6 @@
 			projectRoot = "";
 			targets = (
 				3D2D8D102B92CE030028BE07 /* ZLZuJu */,
-				3D2D8D262B92CE040028BE07 /* ZLZuJuTests */,
-				3D2D8D302B92CE040028BE07 /* ZLZuJuUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,64 +271,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3D2D8D252B92CE040028BE07 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D2D8D2F2B92CE040028BE07 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68642D565A76A8C1341CDCCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZLZuJu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86E5B6AC4870FB72A54D118B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZLZuJu/Pods-ZLZuJu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZLZuJu/Pods-ZLZuJu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZLZuJu/Pods-ZLZuJu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D2D8D0D2B92CE030028BE07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2D8D512B92DAE60028BE07 /* ZJListView.swift in Sources */,
+				3D2D8D4B2B92D95F0028BE07 /* UIColor+Ex.swift in Sources */,
+				3D2D8D4D2B92D9CA0028BE07 /* String+Ex.swift in Sources */,
+				3D2D8D4F2B92DA960028BE07 /* ZJListViewController.swift in Sources */,
 				3D2D8D192B92CE030028BE07 /* ViewController.swift in Sources */,
+				3DD5E0512B95FD3A005A0431 /* UIFont+Ex.swift in Sources */,
 				3D2D8D152B92CE030028BE07 /* AppDelegate.swift in Sources */,
 				3D2D8D172B92CE030028BE07 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D2D8D232B92CE040028BE07 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D2D8D2C2B92CE040028BE07 /* ZLZuJuTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D2D8D2D2B92CE040028BE07 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D2D8D382B92CE040028BE07 /* ZLZuJuUITestsLaunchTests.swift in Sources */,
-				3D2D8D362B92CE040028BE07 /* ZLZuJuUITests.swift in Sources */,
+				3D2D8D562B92DC950028BE07 /* ZJTableViewCell.swift in Sources */,
+				3D2D8D542B92DB2B0028BE07 /* ZJListManger.swift in Sources */,
+				3D2D8D582B92DE4B0028BE07 /* ZJListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3D2D8D292B92CE040028BE07 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3D2D8D102B92CE030028BE07 /* ZLZuJu */;
-			targetProxy = 3D2D8D282B92CE040028BE07 /* PBXContainerItemProxy */;
-		};
-		3D2D8D332B92CE040028BE07 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3D2D8D102B92CE030028BE07 /* ZLZuJu */;
-			targetProxy = 3D2D8D322B92CE040028BE07 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3D2D8D1A2B92CE030028BE07 /* Main.storyboard */ = {
@@ -437,12 +477,15 @@
 		};
 		3D2D8D3C2B92CE040028BE07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F12CA5AB11B765133B82097 /* Pods-ZLZuJu.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GQJ3FJJMM4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZLZuJu/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -450,6 +493,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,12 +509,15 @@
 		};
 		3D2D8D3D2B92CE040028BE07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 716A27B3ACA0255C92839B98 /* Pods-ZLZuJu.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GQJ3FJJMM4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZLZuJu/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,6 +525,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,82 +536,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3D2D8D3F2B92CE040028BE07 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GQJ3FJJMM4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhang.zlju.ZLZuJuTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZLZuJu.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZLZuJu";
-			};
-			name = Debug;
-		};
-		3D2D8D402B92CE040028BE07 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GQJ3FJJMM4;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhang.zlju.ZLZuJuTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZLZuJu.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZLZuJu";
-			};
-			name = Release;
-		};
-		3D2D8D422B92CE040028BE07 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GQJ3FJJMM4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhang.zlju.ZLZuJuUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZLZuJu;
-			};
-			name = Debug;
-		};
-		3D2D8D432B92CE040028BE07 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = GQJ3FJJMM4;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhang.zlju.ZLZuJuUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZLZuJu;
 			};
 			name = Release;
 		};
@@ -584,24 +556,6 @@
 			buildConfigurations = (
 				3D2D8D3C2B92CE040028BE07 /* Debug */,
 				3D2D8D3D2B92CE040028BE07 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3D2D8D3E2B92CE040028BE07 /* Build configuration list for PBXNativeTarget "ZLZuJuTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D2D8D3F2B92CE040028BE07 /* Debug */,
-				3D2D8D402B92CE040028BE07 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3D2D8D412B92CE040028BE07 /* Build configuration list for PBXNativeTarget "ZLZuJuUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D2D8D422B92CE040028BE07 /* Debug */,
-				3D2D8D432B92CE040028BE07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
