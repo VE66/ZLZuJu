@@ -11,7 +11,7 @@ class ZJListManger: NSObject {
     
     var lists: [ZJListModel] = []
 
-    func getData() -> [ZJListModel] {
+    func getData(completion: @escaping ([ZJListModel])->Void) {
         var items: [ZJListModel] = []
         
         for _ in 0...3 {
@@ -29,6 +29,6 @@ class ZJListManger: NSObject {
         }
         
         lists = items
-        return items
+        completion(items)
     }
 }

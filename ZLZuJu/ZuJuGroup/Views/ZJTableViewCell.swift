@@ -20,7 +20,7 @@ class ZJTableViewCell: UITableViewCell {
     private lazy var organizerBgView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(hex: "#F5F6F6")
-        
+        view.layer.cornerRadius = 25/2.0
         view.addSubview(avater)
         view.addSubview(organizerLable)
         avater.snp.makeConstraints { make in
@@ -38,6 +38,8 @@ class ZJTableViewCell: UITableViewCell {
     
     private lazy var avater: UIImageView = {
        let img = UIImageView()
+        img.layer.cornerRadius = 10
+        img.backgroundColor = UIColor.red
         img.contentMode = .scaleAspectFit
         return img
     }()
@@ -51,23 +53,24 @@ class ZJTableViewCell: UITableViewCell {
 
     private lazy var ageBgView: UIView = {
         let view = UIView()
+//        view.layer.cornerRadius = 
         view.backgroundColor = UIColor(hex: "#577CFF", alpha: 0.1)
-        view.addSubview(ageTipImage)
+        view.addSubview(genderTipImage)
         view.addSubview(ageLable)
-        ageTipImage.snp.makeConstraints { make in
+        genderTipImage.snp.makeConstraints { make in
             make.left.equalTo(4)
             make.centerY.equalToSuperview()
             make.width.height.equalTo(12)
         }
         ageLable.snp.makeConstraints { make in
-            make.left.equalTo(ageTipImage.snp.right).offset(4)
+            make.left.equalTo(genderTipImage.snp.right).offset(4)
             make.centerY.equalToSuperview()
             make.right.equalToSuperview().offset(-4)
         }
         return view
     }()
     
-    private lazy var ageTipImage: UIImageView = {
+    private lazy var genderTipImage: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.layer.cornerRadius = 6
@@ -76,7 +79,7 @@ class ZJTableViewCell: UITableViewCell {
     
     private lazy var ageLable = {
        let lab = UILabel()
-        lab.font = UIFont.pingFangSC(ofSize: 1)
+        lab.font = UIFont.pingFangSC(ofSize: 16)
         lab.textColor = UIColor(hex: "#2D282A")
         return lab
     }()
@@ -84,6 +87,18 @@ class ZJTableViewCell: UITableViewCell {
     private lazy var vipTipImage: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
+    private lazy var paymentBgView: UIView = {
+       let view = UIView()
+        view.backgroundColor = UIColor(hex: "#F5F6F6")
+        view.addSubview(paymentLable)
+        paymentLable.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(8)
+            make.right.equalToSuperview().offset(-8)
+            make.centerY.equalToSuperview()
+        }
         return view
     }()
     
@@ -160,18 +175,20 @@ class ZJTableViewCell: UITableViewCell {
         return lab
     }()
     
+    weak var currentModel: ZJListModel?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = .clear
         setupUI()
     }
     
-    func setupUI() {
+    private func setupUI() {
         self.contentView.addSubview(bgView)
         bgView.addSubview(organizerBgView)
         bgView.addSubview(ageBgView)
         bgView.addSubview(vipTipImage)
-        bgView.addSubview(paymentLable)
+        bgView.addSubview(paymentBgView)
         bgView.addSubview(titleLable)
         bgView.addSubview(dottedLine)
         bgView.addSubview(timeBgView)
@@ -179,7 +196,101 @@ class ZJTableViewCell: UITableViewCell {
         bgView.addSubview(memberLable)
         bgView.addSubview(addressLable)
         
+        setupConstraints()
     }
+    
+    private func setupConstraints() {
+        bgView.snp.makeConstraints { make in
+            make.top.equalTo(6)
+            make.left.equalTo(12)
+            make.right.equalTo(-12)
+            make.bottom.equalTo(-6)
+        }
+        
+        organizerBgView.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(12)
+            make.top.equalTo(14)
+            make.height.equalTo(25)
+        }
+        
+        ageBgView.snp.makeConstraints { make in
+            make.left.equalTo(organizerBgView.snp.right).offset(12)
+            make.centerY.equalTo(organizerBgView)
+            make.height.equalTo(20)
+        }
+        
+        vipTipImage.snp.makeConstraints { make in
+            make.left.equalTo(ageBgView.snp.right).offset(8)
+            make.centerY.equalTo(ageBgView)
+        }
+        
+        paymentBgView.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-12)
+            make.centerY.equalTo(vipTipImage)
+            make.height.equalTo(24)
+        }
+        
+        titleLable.snp.makeConstraints { make in
+            make.left.equalTo(organizerBgView)
+            make.top.equalTo(organizerBgView.snp.bottom).offset(10)
+            make.right.lessThanOrEqualToSuperview()
+        }
+        
+        dottedLine.snp.makeConstraints { make in
+            make.top.equalTo(titleLable.snp.bottom).offset(12)
+            make.height.equalTo(0.5)
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().offset(-12)
+        }
+        
+        timeBgView.snp.makeConstraints { make in
+            make.top.equalTo(dottedLine.snp.bottom).offset(12)
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().offset(-12)
+            make.height.equalTo(26)
+        }
+        
+        memberImages.snp.makeConstraints { make in
+            make.top.equalTo(timeBgView.snp.bottom).offset(12)
+            make.left.equalToSuperview().offset(12)
+            make.height.equalTo(24)
+            make.bottom.equalToSuperview().offset(-16)
+        }
+        
+        memberLable.snp.makeConstraints { make in
+            make.left.equalTo(memberImages.snp.right).offset(12)
+            make.centerY.equalTo(memberImages)
+        }
+        
+        addressLable.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-12)
+            make.centerY.equalTo(memberImages)
+        }
+        
+    }
+    
+    func setData(_ model: ZJListModel) {
+        self.currentModel = model
+        organizerLable.text = model.organizer ?? ""
+        if model.gender == .man {
+            genderTipImage.image = UIImage(named: "zu_man")
+        } else {
+            genderTipImage.image = UIImage(named: "zj_girl")
+        }
+        ageLable.text = String(model.age)
+        
+        vipTipImage.isHidden = !model.isVip
+        paymentLable.text = model.paymentState.value
+        
+        titleLable.text = model.title
+        
+        timeLab.text = model.time
+        
+        memberImages.backgroundColor = UIColor.red
+        memberLable.text = "4/12 组局中"
+        addressLable.text = model.address
+    }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

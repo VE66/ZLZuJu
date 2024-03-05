@@ -19,9 +19,10 @@ class ZJListView: UIView {
         let tb = UITableView(frame: CGRect.zero, style: .plain)
         tb.dataSource = self
         tb.delegate = self
-        tb.estimatedRowHeight = 48
+        tb.estimatedRowHeight = 196
         tb.rowHeight = UITableView.automaticDimension
         tb.separatorStyle = .none
+        tb.backgroundColor = UIColor(hex: "#F6F6F6")
         tb.register(ZJTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(ZJTableViewCell.self))
         return tb
     }()
@@ -32,13 +33,16 @@ class ZJListView: UIView {
         setupUI()
     }
     
-    func setupUI() {
+    private func setupUI() {
         self.addSubview(tbView)
         tbView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
     
+    func reloadData() {
+        self.tbView.reloadData()
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -61,8 +65,8 @@ extension ZJListView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ZJTableViewCell.self), for: indexPath) as! ZJTableViewCell
-        let model = manager?.lists[indexPath.row]
-        
+        let model = manager!.lists[indexPath.row]
+        cell.setData(model)
         return cell
     }
     

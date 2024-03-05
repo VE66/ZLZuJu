@@ -18,9 +18,17 @@ class ZJListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getData()
         self.view.addSubview(listView)
+        listView.manager = manager
         listView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+    }
+    
+    func getData() {
+        manager.getData { [weak self] items in
+            self?.listView.reloadData()
         }
     }
     

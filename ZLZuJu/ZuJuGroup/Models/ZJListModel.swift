@@ -12,6 +12,20 @@ enum ZJPaymentType {
     case sponsorPays, // 发起者买单
          manA, // 男A女免
          AA //
+    
+    var value: String {
+        switch self {
+        case .sponsorPays:
+            return "我买单"
+        case .manA:
+            return "男A女免"
+        case .AA:
+            return "AA制"
+        default:
+            return ""
+        }
+    }
+    
 }
 
 enum ZJGenderType {
