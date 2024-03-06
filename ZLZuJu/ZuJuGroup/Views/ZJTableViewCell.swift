@@ -53,7 +53,7 @@ class ZJTableViewCell: UITableViewCell {
 
     private lazy var ageBgView: UIView = {
         let view = UIView()
-//        view.layer.cornerRadius = 
+        view.layer.cornerRadius = 10
         view.backgroundColor = UIColor(hex: "#577CFF", alpha: 0.1)
         view.addSubview(genderTipImage)
         view.addSubview(ageLable)
@@ -74,6 +74,7 @@ class ZJTableViewCell: UITableViewCell {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.layer.cornerRadius = 6
+        view.clipsToBounds = true
         return view
     }()
     
@@ -94,6 +95,7 @@ class ZJTableViewCell: UITableViewCell {
        let view = UIView()
         view.backgroundColor = UIColor(hex: "#F5F6F6")
         view.addSubview(paymentLable)
+        view.layer.cornerRadius = 12
         paymentLable.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(8)
             make.right.equalToSuperview().offset(-8)
@@ -112,6 +114,7 @@ class ZJTableViewCell: UITableViewCell {
     
     private lazy var titleLable: UILabel = {
        let lab = UILabel()
+        lab.numberOfLines = 0
         lab.textColor = UIColor(hex: "#19191C")
         lab.font = UIFont.pingFangSC(ofSize: 16)
         lab.textAlignment = .left
@@ -127,7 +130,8 @@ class ZJTableViewCell: UITableViewCell {
     
     private lazy var timeBgView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(hex: "#577CFF", alpha: 0.1)
+        view.backgroundColor = UIColor(hex: "#F6F6F6")
+        view.layer.cornerRadius = 4
         view.addSubview(timeTitleLab)
         view.addSubview(timeLab)
         timeTitleLab.snp.makeConstraints { make in
@@ -180,6 +184,7 @@ class ZJTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = .clear
+        self.selectionStyle = .none
         setupUI()
     }
     
@@ -277,12 +282,12 @@ class ZJTableViewCell: UITableViewCell {
         } else {
             genderTipImage.image = UIImage(named: "zj_girl")
         }
-        ageLable.text = String(model.age)
+        ageLable.text = String(model.age) + "岁"
         
         vipTipImage.isHidden = !model.isVip
         paymentLable.text = model.paymentState.value
         
-        titleLable.text = model.title
+        titleLable.attributedText = setTitleAttring(model.title ?? "", type: model.activityType.value)
         
         timeLab.text = model.time
         
@@ -291,6 +296,42 @@ class ZJTableViewCell: UITableViewCell {
         addressLable.text = model.address
     }
     
+    private func setTitleAttring(_ text: String, type: String?) -> NSAttributedString {
+        let attr = NSMutableAttributedString(string: text)
+        attr.setAttributes([.font: UIFont.pingFangSC(ofSize: 16), .foregroundColor: UIColor(hex: "#19191C")], range: NSRange(location: 0, length: text.count))
+        let textAttach = getLableString(type ?? "体育活动")
+        
+        let attchAttributeStr = NSAttributedString(attachment: textAttach)
+        
+        attr.append(attchAttributeStr)
+        return attr
+    }
+    
+    private func getLableString(_ text: String) -> NSTextAttachment {
+        let color = UIColor(hex: "#FF7D36")
+        let lab = UILabel()
+        lab.font = UIFont.pingFangSC(ofSize: 11)
+        lab.textAlignment = .center
+        lab.layer.borderWidth = 1
+        lab.layer.cornerRadius = 4
+        lab.layer.borderColor = color.cgColor
+        lab.text = text
+        lab.textColor = color
+        lab.sizeToFit()
+        var frame = lab.frame
+        frame.size.width += 8
+//        frame.size.height += 2
+        lab.frame = frame
+        
+        let attach = NSTextAttachment(image: lab.toImageView())
+        attach.bounds = CGRect(x: 4, y: -2, width: frame.width, height: frame.height)
+        return attach
+        
+    }
+    
+    private func getMemberImages() {
+        
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
