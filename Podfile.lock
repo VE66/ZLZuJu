@@ -1,20 +1,25 @@
 PODS:
   - HandyJSON (5.0.2)
+  - Kingfisher (7.11.0)
   - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - HandyJSON
+  - Kingfisher
   - SnapKit
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
   trunk:
     - HandyJSON
     - SnapKit
 
 SPEC CHECKSUMS:
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 123aaa6896cb749d73d5b0b1263af16d71fface2
+PODFILE CHECKSUM: 61592f49861076507f03e523ba72ae97b13d1131
 
 COCOAPODS: 1.15.2

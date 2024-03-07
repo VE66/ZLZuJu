@@ -19,11 +19,27 @@ class ZJListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
+        setRightBarItem()
         self.view.addSubview(listView)
         listView.manager = manager
         listView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    func setRightBarItem() {
+        let btn = UIButton(type: .system)
+        btn.setTitle("筛选", for: .normal)
+        btn.addTarget(self, action: #selector(filterAction), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
+    }
+    
+    @objc func filterAction() {
+        let vc = ZJFilterViewController()
+        vc.modalPresentationStyle = .custom
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true)
     }
     
     func getData() {
