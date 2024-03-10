@@ -18,6 +18,28 @@ class ZJPublishConditionView: UIView, UITextViewDelegate {
     
     @IBOutlet weak var ZJPeopleCountButton: UIControl!
     
+    
+    @IBAction func dateSelectAction(_ sender: UIControl) {
+    }
+    
+    
+    @IBAction func timeSelectAction(_ sender: UIControl) {
+    }
+    
+    @IBAction func addressSelectAction(_ sender: UIControl) {
+    }
+    
+    @IBAction func peopleSelectAction(_ sender: UIControl) {
+    }
+    
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    
     @IBOutlet weak var descriptionTextView: UITextView! {
         didSet {
             descriptionTextView.delegate = self

@@ -46,17 +46,19 @@
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="cp3-ew-JxE"/>
                                         <constraint firstAttribute="height" constant="24" id="eUD-qm-iWh"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="女"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="女">
-                                        <fontDescription key="titleFontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                        <color key="baseForegroundColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </buttonConfiguration>
+                                    <state key="normal" title="女">
+                                        <color key="titleColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <integer key="value" value="4"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="girlAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="VoB-9c-Rn5"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjx-eg-pbn">
                                     <rect key="frame" x="162" y="10" width="50" height="24"/>
@@ -65,17 +67,19 @@
                                         <constraint firstAttribute="height" constant="24" id="L6L-tj-ene"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="kl5-71-FW8"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="女"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="不限">
-                                        <fontDescription key="titleFontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                        <color key="baseForegroundColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </buttonConfiguration>
+                                    <state key="normal" title="不限">
+                                        <color key="titleColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <integer key="value" value="4"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="nolimitAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="liJ-dq-343"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqP-HU-UQc">
                                     <rect key="frame" x="224" y="10" width="50" height="24"/>
@@ -84,17 +88,19 @@
                                         <constraint firstAttribute="height" constant="24" id="E3N-v0-dtP"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="mHC-KA-HxY"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="女"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="男">
-                                        <fontDescription key="titleFontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                        <color key="baseForegroundColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </buttonConfiguration>
+                                    <state key="normal" title="男">
+                                        <color key="titleColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <integer key="value" value="4"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="manAAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="g7h-50-8DX"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gmh-hM-WO6">
                                     <rect key="frame" x="0.0" y="43.666666666666671" width="336" height="0.3333333333333357"/>
@@ -241,6 +247,8 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="ageLabel" destination="vhj-eY-WxN" id="Czg-ar-T71"/>
+                <outlet property="authenticationLabel" destination="FJ4-E9-aOF" id="YUd-BN-cMd"/>
                 <outlet property="girlButton" destination="FpZ-mY-hrN" id="MSx-xG-UKj"/>
                 <outlet property="manButton" destination="TqP-HU-UQc" id="Piv-vK-2fg"/>
                 <outlet property="noLimitButton" destination="Mjx-eg-pbn" id="hLL-Yq-KLc"/>

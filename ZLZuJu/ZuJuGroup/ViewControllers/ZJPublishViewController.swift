@@ -18,8 +18,10 @@ class ZJPublishViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(hex: "#F6F6F6")
-
         self.view.addSubview(publishView)
+        publishView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
 
     }
     

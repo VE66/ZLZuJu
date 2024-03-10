@@ -71,6 +71,9 @@
                                 <constraint firstItem="6OB-nq-yR7" firstAttribute="leading" secondItem="asn-8D-lf1" secondAttribute="leading" id="pwc-xA-Gsd"/>
                                 <constraint firstAttribute="trailing" secondItem="6OB-nq-yR7" secondAttribute="trailing" id="taK-pw-IOf"/>
                             </constraints>
+                            <connections>
+                                <action selector="dateSelectAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="T8h-5D-QmP"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" id="Gkk-ur-a1A" customClass="UIControl">
                             <rect key="frame" x="0.0" y="44" width="344" height="44"/>
@@ -125,6 +128,9 @@
                                 <constraint firstItem="aDs-dc-dZD" firstAttribute="centerY" secondItem="Gkk-ur-a1A" secondAttribute="centerY" id="ch9-w9-OeW"/>
                                 <constraint firstItem="UzN-Mg-mnh" firstAttribute="leading" secondItem="Gkk-ur-a1A" secondAttribute="leading" id="sxr-it-Og3"/>
                             </constraints>
+                            <connections>
+                                <action selector="timeSelectAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="DVw-er-flZ"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" id="gu2-D4-NdM" customClass="UIControl">
                             <rect key="frame" x="0.0" y="88" width="344" height="44"/>
@@ -179,6 +185,9 @@
                                 <constraint firstItem="UE6-uE-9og" firstAttribute="leading" secondItem="gu2-D4-NdM" secondAttribute="leading" id="rC2-MZ-DXU"/>
                                 <constraint firstItem="O7E-oA-hHV" firstAttribute="centerY" secondItem="gu2-D4-NdM" secondAttribute="centerY" id="ySc-65-pZa"/>
                             </constraints>
+                            <connections>
+                                <action selector="addressSelectAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="yVk-7G-bcs"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" id="zqa-xb-XAk" customClass="UIControl">
                             <rect key="frame" x="0.0" y="132" width="344" height="44"/>
@@ -233,6 +242,9 @@
                                 <constraint firstItem="7bZ-RZ-Iew" firstAttribute="leading" secondItem="zqa-xb-XAk" secondAttribute="leading" id="vDM-Se-6lY"/>
                                 <constraint firstAttribute="trailing" secondItem="7bZ-RZ-Iew" secondAttribute="trailing" id="xNK-OM-dNL"/>
                             </constraints>
+                            <connections>
+                                <action selector="peopleSelectAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="dIX-N5-I17"/>
+                            </connections>
                         </view>
                     </subviews>
                     <constraints>
@@ -300,8 +312,12 @@
                 <outlet property="ZJDateButton" destination="asn-8D-lf1" id="mlh-zr-qF7"/>
                 <outlet property="ZJPeopleCountButton" destination="zqa-xb-XAk" id="fDj-wx-ck9"/>
                 <outlet property="ZJTimeButton" destination="Gkk-ur-a1A" id="td1-hG-Azo"/>
+                <outlet property="addressLabel" destination="0Kf-Js-0CN" id="frU-9L-0X1"/>
+                <outlet property="dateLabel" destination="ymD-uL-XV3" id="zoP-W4-4aq"/>
                 <outlet property="descriptionTextView" destination="R74-d8-dQh" id="ZuM-j5-F5A"/>
+                <outlet property="numberLabel" destination="wwG-vT-S5Y" id="cWV-8a-uZy"/>
                 <outlet property="placeHolder" destination="vpN-9v-1Ib" id="yQL-Bq-ZjN"/>
+                <outlet property="timeLabel" destination="aDs-dc-dZD" id="uH8-5R-pt1"/>
             </connections>
             <point key="canvasLocation" x="22.900763358778626" y="34.154929577464792"/>
         </view>

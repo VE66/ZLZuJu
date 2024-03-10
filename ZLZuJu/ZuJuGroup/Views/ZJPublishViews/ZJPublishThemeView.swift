@@ -21,15 +21,61 @@ class ZJPublishThemeView: UIView, UICollectionViewDelegate, UICollectionViewData
         }
     }
     
+    private func setButtonData(_ button: UIButton) {
+        button.setBackgroundImage(UIColor(hex: "#F7F7F7").toImage(), for: .normal)
+        button.setBackgroundImage(UIColor(hex: "#FF528D").toImage(), for: .selected)
+        button.setTitleColor(UIColor.white, for: .selected)
+        button.setTitleColor(UIColor(hex: "#2D282A"), for: .normal)
+        button.clipsToBounds = true
+    }
     
-    @IBOutlet weak var organizerPayButton: UIButton!
+    @IBOutlet weak var organizerPayButton: UIButton! {
+        didSet {
+            setButtonData(organizerPayButton)
+        }
+    }
    
-    @IBOutlet weak var manAGirlFreeButton: UIButton!
+    @IBOutlet weak var manAGirlFreeButton: UIButton! {
+        didSet {
+            setButtonData(manAGirlFreeButton)
+        }
+    }
     
-    @IBOutlet weak var AAButton: UIButton!
+    @IBOutlet weak var AAButton: UIButton! {
+        didSet {
+            setButtonData(AAButton)
+        }
+    }
     
+
+    @IBAction func organizerAction(_ sender: UIButton) {
+        currentPayButton = sender
+    }
     
+    @IBAction func manAGirlFreeAction(_ sender: UIButton) {
+        currentPayButton = sender
+    }
     
+    @IBAction func AAAction(_ sender: UIButton) {
+        currentPayButton = sender
+    }
+    
+    private var currentSelect: IndexPath = IndexPath(row: 0, section: 0)
+    private var currentPayButton: UIButton? {
+        didSet {
+            oldValue?.isSelected = false
+            currentPayButton?.isSelected = true
+            if currentPayButton == manAGirlFreeButton {
+                paymentType = .manA
+            } else if currentPayButton == AAButton {
+                paymentType = .AA
+            } else if currentPayButton == organizerPayButton {
+                paymentType = .sponsorPays
+            }
+        }
+    }
+
+    var paymentType: ZJPaymentType?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         items.count
@@ -38,10 +84,18 @@ class ZJPublishThemeView: UIView, UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_id", for: indexPath) as! ZJThemeCollectionCell
         let mode = items[indexPath.row]
-        cell.setdata(mode, isSelected: false)
+        
+        cell.setdata(mode, isSelected: currentSelect == indexPath)
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! ZJThemeCollectionCell
+        cell.selected(true)
+        let decell = collectionView.cellForItem(at: currentSelect) as! ZJThemeCollectionCell
+        decell.selected(false)
+        currentSelect = indexPath
+    }
     
     
     
@@ -75,6 +129,7 @@ class ZJThemeCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.cornerRadius = 4
+        self.clipsToBounds = true
         self.addSubview(titelLab)
         titelLab.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -83,10 +138,10 @@ class ZJThemeCollectionCell: UICollectionViewCell {
     
     func setdata(_ mode: ZJActivityType, isSelected: Bool) {
         titelLab.text = mode.value
-        setSelectedItem(isSelected)
+        selected(isSelected)
     }
     
-    func setSelectedItem(_ isSelected: Bool) {
+    func selected(_ isSelected: Bool) {
         if isSelected {
             titelLab.textColor = font_selectedColor
             titelLab.backgroundColor = bg_selectedColor

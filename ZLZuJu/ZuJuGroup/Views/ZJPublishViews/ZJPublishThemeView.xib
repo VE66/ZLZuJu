@@ -56,52 +56,61 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfp-ZX-nFc">
-                    <rect key="frame" x="16" y="164" width="94" height="28"/>
-                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.90226614240000003" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="16" y="164" width="90" height="28"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="28" id="emn-56-aBM"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="发起者买单">
-                        <fontDescription key="titleFontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
-                        <color key="baseForegroundColor" red="0.1764705882352941" green="0.15686274509803921" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </buttonConfiguration>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="发起者买单">
+                        <color key="titleColor" red="0.1764705882352941" green="0.15686274509803921" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <integer key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="organizerAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="rG1-bu-WLr"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDP-W2-PUK">
-                    <rect key="frame" x="120" y="161.33333333333334" width="75.666666666666686" height="33.666666666666657"/>
-                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.90226614240000003" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="116" y="164" width="72" height="28"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="男A女免">
-                        <fontDescription key="titleFontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
-                        <color key="baseForegroundColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </buttonConfiguration>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="男A女免">
+                        <color key="titleColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <integer key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="manAGirlFreeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="eQX-EG-t1M"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkb-3b-xdr">
-                    <rect key="frame" x="205.66666666666666" y="161.33333333333334" width="57.333333333333343" height="33.666666666666657"/>
-                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.90226614240000003" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="198" y="164" width="54" height="28"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="AA制">
-                        <fontDescription key="titleFontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
-                        <color key="baseForegroundColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </buttonConfiguration>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="AA制">
+                        <color key="titleColor" red="0.1764705882" green="0.15686274510000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <integer key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="AAAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Ae-cq-0AE"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -119,11 +128,13 @@
                 <constraint firstItem="DRb-Lp-wwY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="UIk-ve-zVV"/>
                 <constraint firstItem="apv-II-93D" firstAttribute="leading" secondItem="vCu-Yr-1uc" secondAttribute="trailing" constant="2" id="VJB-4d-pbK"/>
                 <constraint firstItem="DRb-Lp-wwY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="b1y-Ga-k0q"/>
+                <constraint firstItem="Vkb-3b-xdr" firstAttribute="height" secondItem="Qfp-ZX-nFc" secondAttribute="height" id="bvg-Qh-pT6"/>
                 <constraint firstItem="bDP-W2-PUK" firstAttribute="centerY" secondItem="Qfp-ZX-nFc" secondAttribute="centerY" id="dvK-gl-QjA"/>
                 <constraint firstItem="Vkb-3b-xdr" firstAttribute="leading" secondItem="bDP-W2-PUK" secondAttribute="trailing" constant="10" id="eDz-ns-g3G"/>
                 <constraint firstItem="REQ-8a-el9" firstAttribute="leading" secondItem="DRb-Lp-wwY" secondAttribute="trailing" constant="2" id="hJ9-Gi-c94"/>
                 <constraint firstItem="wzJ-Ue-5aA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="hfb-5s-b65"/>
                 <constraint firstItem="bDP-W2-PUK" firstAttribute="leading" secondItem="Qfp-ZX-nFc" secondAttribute="trailing" constant="10" id="nqu-H8-PS9"/>
+                <constraint firstItem="bDP-W2-PUK" firstAttribute="height" secondItem="Qfp-ZX-nFc" secondAttribute="height" id="rha-j0-MFT"/>
                 <constraint firstItem="vCu-Yr-1uc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="wjh-P2-2hg"/>
                 <constraint firstItem="Vkb-3b-xdr" firstAttribute="centerY" secondItem="bDP-W2-PUK" secondAttribute="centerY" id="yEb-bm-JCx"/>
             </constraints>

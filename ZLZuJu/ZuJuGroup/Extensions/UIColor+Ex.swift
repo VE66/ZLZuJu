@@ -44,4 +44,15 @@ extension UIColor {
             green: CGFloat((intCode >> 8) & 0xFF) / 255.0,
             blue: CGFloat((intCode) & 0xFF) / 255.0, alpha: a)
     }
+    
+    func toImage(viewSize: CGSize = CGSize(width: 1, height: 1)) -> UIImage{
+        let rect: CGRect = CGRect(x: 0, y: 0, width: viewSize.width, height: viewSize.height)
+        UIGraphicsBeginImageContext(rect.size)
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        context.setFillColor(self.cgColor)
+        context.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsGetCurrentContext()
+        return image!
+    }
 }
