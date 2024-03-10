@@ -36,9 +36,6 @@ class ZJListViewController: UIViewController {
     
     @objc func filterAction() {
         let vc = ZJFilterViewController()
-        vc.modalPresentationStyle = .custom
-        vc.modalPresentationCapturesStatusBarAppearance = true
-        vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true)
     }
     

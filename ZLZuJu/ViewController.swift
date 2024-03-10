@@ -31,7 +31,8 @@ class ViewController: UIViewController {
     }
     
     @objc func pushZLTableViewController() {
-        let vc = ZJListViewController()
+//        let vc = ZJListViewController()
+        let vc = ZJPublishViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
