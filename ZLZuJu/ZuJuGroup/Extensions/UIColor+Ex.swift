@@ -56,3 +56,24 @@ extension UIColor {
         return image!
     }
 }
+
+/// 主题红
+let color_FF528D = "#FF528D"
+/// 背景灰白
+let color_F6F6F6 = "#F6F6F6"
+/// 背景灰白2
+let color_F5F6F6 = "#F5F6F6"
+/// 主题黑
+let color_19191C = "#19191C"
+/// 黑2
+let color_2D282A = "#2D282A"
+/// 灰黑
+let color_747475 = "#747475"
+/// 灰
+let color_817E7F = "#817E7F"
+/// 浅灰
+let color_888888 = "#888888"
+/// 淡蓝
+let color_577CFF = "#577CFF"
+/// 橙色
+let color_FF7D36 = "#FF7D36"

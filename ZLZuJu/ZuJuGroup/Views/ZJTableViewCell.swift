@@ -288,104 +288,29 @@ class ZJTableViewCell: UITableViewCell {
         vipTipImage.isHidden = !model.isVip
         paymentLable.text = model.paymentState.value
         
-        titleLable.attributedText = setTitleAttring(model.title ?? "", type: model.activityType.value)
-        
+        titleLable.attributedText = NSAttributedString.setTitleAttring(model.title ?? "", labtext: model.activityType.value)
         timeLab.text = model.time
         
-        getMemberImages()
+        setMemberImages()
         memberLable.text = "4/12 组局中"
         addressLable.text = model.address
     }
     
-    private func setTitleAttring(_ text: String, type: String?) -> NSAttributedString {
-        let attr = NSMutableAttributedString(string: text)
-        attr.setAttributes([.font: UIFont.pingFangSC(ofSize: 16), .foregroundColor: UIColor(hex: "#19191C")], range: NSRange(location: 0, length: text.count))
-        let textAttach = getLableString(type ?? "体育活动")
-        
-        let attchAttributeStr = NSAttributedString(attachment: textAttach)
-        
-        attr.append(attchAttributeStr)
-        return attr
-    }
-    
-    private func getLableString(_ text: String) -> NSTextAttachment {
-        let color = UIColor(hex: "#FF7D36")
-        let lab = UILabel()
-        lab.font = UIFont.pingFangSC(ofSize: 11)
-        lab.textAlignment = .center
-        lab.layer.borderWidth = 1
-        lab.layer.cornerRadius = 4
-        lab.layer.borderColor = color.cgColor
-        lab.text = text
-        lab.textColor = color
-        lab.sizeToFit()
-        var frame = lab.frame
-        frame.size.width += 8
-//        frame.size.height += 2
-        lab.frame = frame
-        
-        let attach = NSTextAttachment(image: lab.toImageView())
-        attach.bounds = CGRect(x: 4, y: -2, width: frame.width, height: frame.height)
-        return attach
-        
-    }
-    
-    private func getMemberImages() {
+    private func setMemberImages() {
         for view in memberImages.subviews {
             view.removeFromSuperview()
         }
         
-        var count = currentModel?.teamMember?.count ?? 0
-        if count > 0 {
-            if count > 4 {
-                count = 4
-            }
-            
-            for i in 0...count {
-                var imageView: UIImageView?
-                if i == 4 {
-                    imageView = creatImage(name: "zj_list_more")
-                } else {
-                    imageView = creatImage()
-                }
-                
-                if let imageView = imageView {
-                    memberImages.addSubview(imageView)
-                    imageView.snp.makeConstraints { make in
-                        make.left.equalToSuperview().offset(CGFloat(i)*15.5)
-                        make.centerY.equalToSuperview()
-                        make.width.height.equalTo(24)
-                    }
-                }
-                
-            }
-            
-            let width = CGFloat(count) * 15.5 + 24.0
-            memberImages.snp.remakeConstraints { make in
-                make.top.equalTo(timeBgView.snp.bottom).offset(12)
-                make.left.equalToSuperview().offset(12)
-                make.height.equalTo(24)
-                make.width.equalTo(width)
-                make.bottom.equalToSuperview().offset(-16)
-            }
-            
+        let members = UIView.getMembersView(["1", "2", "3", "4"], itemSize: CGSize(width: 24, height: 24), space: 15.5)
+        memberImages.addSubview(members)
+        members.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            make.height.equalTo(24)
+            make.width.equalTo(members.frame.width)
         }
-        func creatImage(name: String? = nil, url: String? = nil) -> UIImageView {
-            let imageView = UIImageView()
-            if let name = name, name.isEmpty == false {
-                imageView.image = UIImage(named: name)
-            } else if let url = url, url.isEmpty == false, let uRL = URL(string: url) {
-                imageView.kf.setImage(with: .network(uRL))
-            } else {
-                imageView.backgroundColor = UIColor.red
-            }
-            imageView.contentMode = .scaleAspectFit
-            imageView.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-            imageView.layer.cornerRadius = 12
-            return imageView
-        }
-        
     }
+        
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
