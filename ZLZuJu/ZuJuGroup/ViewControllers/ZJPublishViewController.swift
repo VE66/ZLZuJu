@@ -25,6 +25,10 @@ class ZJPublishViewController: UIViewController {
 
     }
     
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        publishView.updateBottomView(self.view.safeAreaInsets)
+    }
 
     /*
     // MARK: - Navigation

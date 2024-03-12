@@ -13,6 +13,7 @@ class ZJPublishView: UIView {
        let view = UIScrollView()
         view.showsHorizontalScrollIndicator = false
         view.showsVerticalScrollIndicator = false
+        view.contentInsetAdjustmentBehavior = .never
         return view
     }()
     
@@ -86,7 +87,6 @@ class ZJPublishView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.layer.borderWidth = 1
         setupUI()
     }
     
@@ -123,7 +123,17 @@ class ZJPublishView: UIView {
         
     }
     
-
+    func updateBottomView(_ safe: UIEdgeInsets) {
+        rootView.snp.remakeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.width.equalToSuperview()
+            make.top.equalTo(safe.top)
+            make.bottom.equalToSuperview()
+        }
+        agreedBgView.snp.updateConstraints { make in
+            make.height.equalTo(60 + safe.bottom)
+        }
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
