@@ -35,6 +35,7 @@
 		3D39BD142B9F346E003E0E73 /* ZJDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD132B9F346E003E0E73 /* ZJDetailViewController.swift */; };
 		3D39BD172B9F34B4003E0E73 /* ZJDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD162B9F34B4003E0E73 /* ZJDetailView.swift */; };
 		3D39BD192B9F4201003E0E73 /* NSAttributedString+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD182B9F4201003E0E73 /* NSAttributedString+Ex.swift */; };
+		3DA1269B2BA038290019AFEE /* ZLMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1269A2BA038290019AFEE /* ZLMacro.swift */; };
 		3DD5E0512B95FD3A005A0431 /* UIFont+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5E0502B95FD3A005A0431 /* UIFont+Ex.swift */; };
 		3DD5E0532B98AB1B005A0431 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5E0522B98AB1B005A0431 /* UIView+Ex.swift */; };
 		3DD5E0552B99FB34005A0431 /* ZJFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5E0542B99FB34005A0431 /* ZJFilterViewController.swift */; };
@@ -78,6 +79,7 @@
 		3D39BD132B9F346E003E0E73 /* ZJDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJDetailViewController.swift; sourceTree = "<group>"; };
 		3D39BD162B9F34B4003E0E73 /* ZJDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJDetailView.swift; sourceTree = "<group>"; };
 		3D39BD182B9F4201003E0E73 /* NSAttributedString+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Ex.swift"; sourceTree = "<group>"; };
+		3DA1269A2BA038290019AFEE /* ZLMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMacro.swift; sourceTree = "<group>"; };
 		3DD5E0502B95FD3A005A0431 /* UIFont+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ex.swift"; sourceTree = "<group>"; };
 		3DD5E0522B98AB1B005A0431 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		3DD5E0542B99FB34005A0431 /* ZJFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJFilterViewController.swift; sourceTree = "<group>"; };
@@ -166,9 +168,9 @@
 		3D2D8D442B92D8800028BE07 /* ZuJuGroup */ = {
 			isa = PBXGroup;
 			children = (
+				3DA126992BA0380E0019AFEE /* Config */,
 				3D2D8D522B92DB0D0028BE07 /* Managers */,
 				3D2D8D492B92D8B90028BE07 /* Extensions */,
-				3D2D8D482B92D8AE0028BE07 /* Tools */,
 				3D2D8D472B92D89F0028BE07 /* Models */,
 				3D2D8D462B92D89A0028BE07 /* Views */,
 				3D2D8D452B92D88E0028BE07 /* ViewControllers */,
@@ -205,13 +207,6 @@
 				3D2D8D572B92DE4B0028BE07 /* ZJListModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		3D2D8D482B92D8AE0028BE07 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		3D2D8D492B92D8B90028BE07 /* Extensions */ = {
@@ -265,6 +260,14 @@
 				3D39BD162B9F34B4003E0E73 /* ZJDetailView.swift */,
 			);
 			path = ZJDetail;
+			sourceTree = "<group>";
+		};
+		3DA126992BA0380E0019AFEE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3DA1269A2BA038290019AFEE /* ZLMacro.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		DDA98A07579106EA052ED583 /* Pods */ = {
@@ -416,6 +419,7 @@
 				3D2D8D152B92CE030028BE07 /* AppDelegate.swift in Sources */,
 				3DD5E0552B99FB34005A0431 /* ZJFilterViewController.swift in Sources */,
 				3D2D8D172B92CE030028BE07 /* SceneDelegate.swift in Sources */,
+				3DA1269B2BA038290019AFEE /* ZLMacro.swift in Sources */,
 				3D2D8D562B92DC950028BE07 /* ZJTableViewCell.swift in Sources */,
 				3D39BD022B9D59BB003E0E73 /* ZJPublishTitleView.swift in Sources */,
 				3D39BCFA2B9C4BFE003E0E73 /* ZFilterView.swift in Sources */,

@@ -58,22 +58,22 @@ extension UIColor {
 }
 
 /// 主题红
-let color_FF528D = "#FF528D"
+let color_FF528D = UIColor(hex: "#FF528D")
 /// 背景灰白
-let color_F6F6F6 = "#F6F6F6"
+let color_F6F6F6 = UIColor(hex: "#F6F6F6")
 /// 背景灰白2
-let color_F5F6F6 = "#F5F6F6"
+let color_F5F6F6 = UIColor(hex: "#F5F6F6")
 /// 主题黑
-let color_19191C = "#19191C"
+let color_19191C = UIColor(hex: "#19191C")
 /// 黑2
-let color_2D282A = "#2D282A"
+let color_2D282A = UIColor(hex: "#2D282A")
 /// 灰黑
-let color_747475 = "#747475"
+let color_747475 = UIColor(hex: "#747475")
 /// 灰
-let color_817E7F = "#817E7F"
+let color_817E7F = UIColor(hex: "#817E7F")
 /// 浅灰
-let color_888888 = "#888888"
+let color_888888 = UIColor(hex: "#888888")
 /// 淡蓝
-let color_577CFF = "#577CFF"
+let color_577CFF = UIColor(hex: "#577CFF")
 /// 橙色
-let color_FF7D36 = "#FF7D36"
+let color_FF7D36 = UIColor(hex: "#FF7D36")
