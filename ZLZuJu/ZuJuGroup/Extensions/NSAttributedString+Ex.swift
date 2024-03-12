@@ -31,10 +31,11 @@ extension NSAttributedString {
         lab.sizeToFit()
         var frame = lab.frame
         frame.size.width += 10
+        frame.size.height += 6
         lab.frame = frame
         
         let attach = NSTextAttachment(image: lab.toImageView())
-        attach.bounds = CGRect(x: 4, y: -2, width: frame.width, height: frame.height)
+        attach.bounds = CGRect(x: 4, y: -5, width: frame.width, height: frame.height)
         return attach
         
     }

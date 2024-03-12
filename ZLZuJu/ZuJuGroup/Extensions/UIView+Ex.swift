@@ -23,11 +23,11 @@ extension UIView {
         let view = UIView()
         var count = items?.count ?? 0
         if count > 0 {
-            if count > 4 {
-                count = 4
+            if count > 5 {
+                count = 5
             }
             
-            for i in 0...count {
+            for i in 0..<count {
                 var imageView: UIImageView?
                 if i == 4 {
                     imageView = creatImage(name: "zj_list_more")
@@ -46,9 +46,8 @@ extension UIView {
                 
             }
             
-            let width = CGFloat(count) * space + itemSize.width
+            let width = CGFloat(count - 1) * space + itemSize.width
             view.frame = CGRect(x: 0, y: 0, width: width, height: itemSize.height)
-            
         }
         return view
     }

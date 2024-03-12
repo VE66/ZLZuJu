@@ -42,6 +42,7 @@ class ZJDetailView: UIView {
         let lab = UILabel()
         lab.font = UIFont.pingFangSCMedium(ofSize: 17)
         lab.textAlignment = .left
+        lab.numberOfLines = 0
         return lab
     }()
     
@@ -116,6 +117,7 @@ class ZJDetailView: UIView {
     private lazy var vipTipImage: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
+        view.image = UIImage(named: "zj_vip")
         return view
     }()
     
@@ -145,6 +147,24 @@ class ZJDetailView: UIView {
         lab.textAlignment = .left
         //--- 中粗16号 组局中  中粗 15号 4 /12 15常规
         lab.font = UIFont.pingFangSC(ofSize: 16)
+        lab.numberOfLines = 0
+        return lab
+    }()
+    
+    lazy var timeTitleLabel = {
+        let lab = UILabel()
+        lab.textAlignment = .left
+        lab.textColor = color_747475
+        lab.text = "发布时间："
+        lab.font = UIFont.pingFangSC(ofSize: 14)
+        return lab
+    }()
+    
+    lazy var timeLabel = {
+        let lab = UILabel()
+        lab.textAlignment = .right
+        lab.textColor = color_747475
+        lab.font = UIFont.pingFangSC(ofSize: 14)
         return lab
     }()
     
@@ -208,6 +228,10 @@ class ZJDetailView: UIView {
             make.top.equalTo(demandBgView.snp.bottom).offset(46)
             make.left.bottom.right.equalTo(self)
         }
+        
+        setConditionView()
+        
+        setdata()
     }
     
     
@@ -229,7 +253,6 @@ class ZJDetailView: UIView {
 
 extension ZJDetailView {
     func setConditionView() {
-        titleLabel.attributedText = NSAttributedString.setTitleAttring("羽毛球爱好者周末挥拍聚会！", textFont: UIFont.pingFangSCMedium(ofSize: 17), labtext: "体育活动", labfont: UIFont.pingFangSC(ofSize: 13))
         contentBgView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(16)
@@ -244,7 +267,7 @@ extension ZJDetailView {
         organizerBgView.snp.makeConstraints { make in
             make.left.equalTo(titleLabel)
             make.top.equalTo(titleLabel.snp.bottom).offset(itemSpace)
-            make.height.equalTo(25)
+            make.height.equalTo(28)
         }
         
         ageBgView.snp.makeConstraints { make in
@@ -275,20 +298,17 @@ extension ZJDetailView {
         }
         
         // 接受人数
-        numberLabel.text = "组局中  4/12"
         //--- 中粗16号 组局中  中粗 15号 4 /12 15常规
         contentBgView.addSubview(numberLabel)
         numberLabel.snp.makeConstraints { make in
-            make.left.equalTo(leftMargin)
-            make.right.equalTo(-rightMargin)
+            make.left.equalTo(leftMargin + 6)
             make.top.equalTo(line0.snp.bottom).offset(11)
         }
         
         contentBgView.addSubview(memberImageView)
         let members = UIView.getMembersView(["","",""], space: 18.5)
         memberImageView.addSubview(members)
-        contentBgView.snp.makeConstraints { make in
-            make.left.equalTo(leftMargin)
+        memberImageView.snp.makeConstraints { make in
             make.right.equalTo(-rightMargin)
             make.height.equalTo(24)
             make.width.equalTo(members.frame.width)
@@ -306,7 +326,6 @@ extension ZJDetailView {
         }
 
         contentBgView.addSubview(addressLabel)
-        addressLabel.text = "台州市 椒江区 某某路某某体育馆 \n 台州市 椒江区 某某路某某体育馆"
         addressLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(leftMargin + 6)
             make.top.equalTo(line1.snp.bottom).offset(12)
@@ -317,12 +336,31 @@ extension ZJDetailView {
         contentBgView.addSubview(addreeImage)
         addreeImage.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-18)
-            make.top.equalTo(line1.snp.bottom).offset(20.5)
-            make.left.right.equalTo(24)
+            make.centerY.equalTo(addressLabel)
+            make.width.height.equalTo(24)
         }
         
         // 发布时间
-        
+        let line2 = getlineview()
+        contentBgView.addSubview(line2)
+        line2.snp.makeConstraints { make in
+            make.left.equalTo(leftMargin)
+            make.right.equalTo(-rightMargin)
+            make.height.equalTo(0.5)
+            make.top.equalTo(addressLabel.snp.bottom).offset(12)
+        }
+
+        contentBgView.addSubview(timeTitleLabel)
+        contentBgView.addSubview(timeLabel)
+        timeTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(line2).offset(12)
+            make.left.equalTo(20)
+            make.bottom.equalToSuperview().offset(-24)
+        }
+        timeLabel.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-20)
+            make.top.equalTo(timeTitleLabel)
+        }
     }
     
     func getlineview() -> UIView {
@@ -333,5 +371,38 @@ extension ZJDetailView {
     
     func setdemandView() {
         
+        
+        func getItemView(_ title: String, content: String, imageName: String) -> UIView {
+            let bgView = UIView()
+            let imageView = UIImageView(image: UIImage(named: imageName))
+            imageView.contentMode = .scaleAspectFit
+            bgView.addSubview(bgView)
+            return bgView
+        }
+    }
+    
+    func setdata() {
+        setConditionData()
+    }
+    
+    private func setConditionData() {
+        titleLabel.attributedText = NSAttributedString.setTitleAttring("羽毛球爱好者周末挥拍聚会！", textFont: UIFont.pingFangSCMedium(ofSize: 17), labtext: "体育活动", labfont: UIFont.pingFangSC(ofSize: 13))
+        
+        organizerLable.text = "往事随风"
+        ageLable.text = "32岁"
+//        if model.gender == .man {
+            genderTipImage.image = UIImage(named: "zu_man")
+//        } else {
+//            genderTipImage.image = UIImage(named: "zj_girl")
+//        }
+        
+        vipTipImage.isHidden = false
+
+        numberLabel.attributedText = NSAttributedString(string: "组局中  4/12", attributes: [.foregroundColor: color_FF528D])
+        descriptionLabel.text = "本周六下午，椒江区羽毛球馆见！2点到5点，一起打球、聊天！结束还可以约个晚饭～"
+        addressLabel.text = "台州市 椒江区 某某路某某体育馆 \n台州市 椒江区 某某路某某体育馆"
+        
+        timeLabel.text = "2023-08-30 02:22"
+
     }
 }

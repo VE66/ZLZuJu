@@ -89,6 +89,7 @@ class ZJTableViewCell: UITableViewCell {
     private lazy var vipTipImage: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
+        view.image = UIImage(named: "zj_vip")
         return view
     }()
     
