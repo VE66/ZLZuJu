@@ -35,6 +35,13 @@
 		3D39BD142B9F346E003E0E73 /* ZJDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD132B9F346E003E0E73 /* ZJDetailViewController.swift */; };
 		3D39BD172B9F34B4003E0E73 /* ZJDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD162B9F34B4003E0E73 /* ZJDetailView.swift */; };
 		3D39BD192B9F4201003E0E73 /* NSAttributedString+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD182B9F4201003E0E73 /* NSAttributedString+Ex.swift */; };
+		3D39BD1D2BA0869B003E0E73 /* ZJGroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD1C2BA0869B003E0E73 /* ZJGroupChatViewController.swift */; };
+		3D39BD1F2BA086B0003E0E73 /* ZJGroupInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD1E2BA086B0003E0E73 /* ZJGroupInfoView.swift */; };
+		3D39BD212BA0884E003E0E73 /* ZJGroupInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD202BA0884E003E0E73 /* ZJGroupInfoCell.swift */; };
+		3D39BD232BA0887B003E0E73 /* ZJGroupInfoSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD222BA0887B003E0E73 /* ZJGroupInfoSwitchCell.swift */; };
+		3D39BD282BA08B8E003E0E73 /* ZJGroupMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD272BA08B8E003E0E73 /* ZJGroupMemberCell.swift */; };
+		3D39BD2A2BA08BA2003E0E73 /* ZJGroupLogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD292BA08BA2003E0E73 /* ZJGroupLogoutCell.swift */; };
+		3D39BD2C2BA091FF003E0E73 /* ZJGroupBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D39BD2B2BA091FF003E0E73 /* ZJGroupBaseCell.swift */; };
 		3DA1269B2BA038290019AFEE /* ZLMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA1269A2BA038290019AFEE /* ZLMacro.swift */; };
 		3DD5E0512B95FD3A005A0431 /* UIFont+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5E0502B95FD3A005A0431 /* UIFont+Ex.swift */; };
 		3DD5E0532B98AB1B005A0431 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD5E0522B98AB1B005A0431 /* UIView+Ex.swift */; };
@@ -79,6 +86,13 @@
 		3D39BD132B9F346E003E0E73 /* ZJDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJDetailViewController.swift; sourceTree = "<group>"; };
 		3D39BD162B9F34B4003E0E73 /* ZJDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJDetailView.swift; sourceTree = "<group>"; };
 		3D39BD182B9F4201003E0E73 /* NSAttributedString+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Ex.swift"; sourceTree = "<group>"; };
+		3D39BD1C2BA0869B003E0E73 /* ZJGroupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJGroupChatViewController.swift; sourceTree = "<group>"; };
+		3D39BD1E2BA086B0003E0E73 /* ZJGroupInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJGroupInfoView.swift; sourceTree = "<group>"; };
+		3D39BD202BA0884E003E0E73 /* ZJGroupInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJGroupInfoCell.swift; sourceTree = "<group>"; };
+		3D39BD222BA0887B003E0E73 /* ZJGroupInfoSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJGroupInfoSwitchCell.swift; sourceTree = "<group>"; };
+		3D39BD272BA08B8E003E0E73 /* ZJGroupMemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJGroupMemberCell.swift; sourceTree = "<group>"; };
+		3D39BD292BA08BA2003E0E73 /* ZJGroupLogoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJGroupLogoutCell.swift; sourceTree = "<group>"; };
+		3D39BD2B2BA091FF003E0E73 /* ZJGroupBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJGroupBaseCell.swift; sourceTree = "<group>"; };
 		3DA1269A2BA038290019AFEE /* ZLMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMacro.swift; sourceTree = "<group>"; };
 		3DD5E0502B95FD3A005A0431 /* UIFont+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ex.swift"; sourceTree = "<group>"; };
 		3DD5E0522B98AB1B005A0431 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
@@ -185,6 +199,7 @@
 				3D2D8D4E2B92DA960028BE07 /* ZJListViewController.swift */,
 				3D39BCFB2B9D594C003E0E73 /* ZJPublishViewController.swift */,
 				3D39BD132B9F346E003E0E73 /* ZJDetailViewController.swift */,
+				3D39BD1C2BA0869B003E0E73 /* ZJGroupChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,11 +207,11 @@
 		3D2D8D462B92D89A0028BE07 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D39BD1B2BA0867B003E0E73 /* Chat */,
+				3D39BD1A2BA08657003E0E73 /* ZJListView */,
 				3D39BD152B9F3475003E0E73 /* ZJDetail */,
 				3D39BCFE2B9D596A003E0E73 /* ZJPublishViews */,
 				3D39BCFD2B9D5956003E0E73 /* ZJFilter */,
-				3D2D8D502B92DAE60028BE07 /* ZJListView.swift */,
-				3D2D8D552B92DC950028BE07 /* ZJTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +275,28 @@
 				3D39BD162B9F34B4003E0E73 /* ZJDetailView.swift */,
 			);
 			path = ZJDetail;
+			sourceTree = "<group>";
+		};
+		3D39BD1A2BA08657003E0E73 /* ZJListView */ = {
+			isa = PBXGroup;
+			children = (
+				3D2D8D502B92DAE60028BE07 /* ZJListView.swift */,
+				3D2D8D552B92DC950028BE07 /* ZJTableViewCell.swift */,
+			);
+			path = ZJListView;
+			sourceTree = "<group>";
+		};
+		3D39BD1B2BA0867B003E0E73 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				3D39BD1E2BA086B0003E0E73 /* ZJGroupInfoView.swift */,
+				3D39BD272BA08B8E003E0E73 /* ZJGroupMemberCell.swift */,
+				3D39BD202BA0884E003E0E73 /* ZJGroupInfoCell.swift */,
+				3D39BD222BA0887B003E0E73 /* ZJGroupInfoSwitchCell.swift */,
+				3D39BD292BA08BA2003E0E73 /* ZJGroupLogoutCell.swift */,
+				3D39BD2B2BA091FF003E0E73 /* ZJGroupBaseCell.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		3DA126992BA0380E0019AFEE /* Config */ = {
@@ -404,11 +441,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D2D8D512B92DAE60028BE07 /* ZJListView.swift in Sources */,
+				3D39BD2A2BA08BA2003E0E73 /* ZJGroupLogoutCell.swift in Sources */,
 				3D2D8D4B2B92D95F0028BE07 /* UIColor+Ex.swift in Sources */,
 				3D39BCFC2B9D594C003E0E73 /* ZJPublishViewController.swift in Sources */,
 				3D2D8D4D2B92D9CA0028BE07 /* String+Ex.swift in Sources */,
+				3D39BD1F2BA086B0003E0E73 /* ZJGroupInfoView.swift in Sources */,
 				3D39BD042B9D59E4003E0E73 /* ZJPublishThemeView.swift in Sources */,
 				3D39BD0E2B9D5DD0003E0E73 /* ZJPublishGenderView.swift in Sources */,
+				3D39BD282BA08B8E003E0E73 /* ZJGroupMemberCell.swift in Sources */,
+				3D39BD212BA0884E003E0E73 /* ZJGroupInfoCell.swift in Sources */,
 				3D2D8D4F2B92DA960028BE07 /* ZJListViewController.swift in Sources */,
 				3D39BD0A2B9D5D8E003E0E73 /* ZJPublishConditionView.swift in Sources */,
 				3D2D8D192B92CE030028BE07 /* ViewController.swift in Sources */,
@@ -418,13 +459,16 @@
 				3D39BD192B9F4201003E0E73 /* NSAttributedString+Ex.swift in Sources */,
 				3D2D8D152B92CE030028BE07 /* AppDelegate.swift in Sources */,
 				3DD5E0552B99FB34005A0431 /* ZJFilterViewController.swift in Sources */,
+				3D39BD232BA0887B003E0E73 /* ZJGroupInfoSwitchCell.swift in Sources */,
 				3D2D8D172B92CE030028BE07 /* SceneDelegate.swift in Sources */,
 				3DA1269B2BA038290019AFEE /* ZLMacro.swift in Sources */,
+				3D39BD2C2BA091FF003E0E73 /* ZJGroupBaseCell.swift in Sources */,
 				3D2D8D562B92DC950028BE07 /* ZJTableViewCell.swift in Sources */,
 				3D39BD022B9D59BB003E0E73 /* ZJPublishTitleView.swift in Sources */,
 				3D39BCFA2B9C4BFE003E0E73 /* ZFilterView.swift in Sources */,
 				3D2D8D542B92DB2B0028BE07 /* ZJListManger.swift in Sources */,
 				3D39BD172B9F34B4003E0E73 /* ZJDetailView.swift in Sources */,
+				3D39BD1D2BA0869B003E0E73 /* ZJGroupChatViewController.swift in Sources */,
 				3D2D8D582B92DE4B0028BE07 /* ZJListModel.swift in Sources */,
 				3DD5E0532B98AB1B005A0431 /* UIView+Ex.swift in Sources */,
 			);
