@@ -227,14 +227,21 @@ class ZJDetailView: UIView {
         bottomBgView.snp.makeConstraints { make in
             make.top.equalTo(demandBgView.snp.bottom).offset(46)
             make.left.bottom.right.equalTo(self)
+            make.height.equalTo(60)
         }
         
         setConditionView()
-        
+        setdemandView()
         setdata()
     }
     
-    
+    func updateBottomView(_ bottom: CGFloat) {
+        bottomBgView.snp.remakeConstraints { make in
+            make.top.equalTo(demandBgView.snp.bottom).offset(46)
+            make.left.bottom.right.equalTo(self)
+            make.height.equalTo(60 + bottom)
+        }
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -371,12 +378,80 @@ extension ZJDetailView {
     
     func setdemandView() {
         
+        let titleLabel = UILabel()
+        titleLabel.text = "组局信息"
+        titleLabel.font = UIFont.pingFangSCMedium(ofSize: 16)
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = color_19191C
+        demandBgView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(12)
+            make.centerX.equalToSuperview()
+        }
         
+        let item1 = getItemView("活动时间", content: "2023-08-30 02:22", imageName: "zj_clock")
+        let item2 = getItemView("买单方式", content: "男A女免", imageName: "zj_card_pos")
+        let stackView1 = UIStackView()
+        stackView1.axis = .horizontal
+        stackView1.distribution = .fillEqually
+        stackView1.addArrangedSubview(item1)
+        stackView1.addArrangedSubview(item2)
+        demandBgView.addSubview(stackView1)
+        stackView1.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(14)
+            make.right.equalToSuperview().offset(-14)
+            make.height.equalTo(40)
+            make.top.equalTo(titleLabel.snp.bottom).offset(16)
+        }
+
+        let item3 = getItemView("年龄要求", content: "18-55岁·女性", imageName: "zj_document")
+        let item4 = getItemView("实名认证", content: "需要", imageName: "zj_user_tick")
+        
+        let stackView2 = UIStackView()
+        stackView2.axis = .horizontal
+        stackView2.distribution = .fillEqually
+        stackView2.addArrangedSubview(item3)
+        stackView2.addArrangedSubview(item4)
+        demandBgView.addSubview(stackView2)
+        stackView2.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(14)
+            make.right.equalToSuperview().offset(-14)
+            make.height.equalTo(40)
+            make.top.equalTo(stackView1.snp.bottom).offset(16)
+            make.bottom.equalToSuperview().offset(-12)
+        }
+
+
         func getItemView(_ title: String, content: String, imageName: String) -> UIView {
             let bgView = UIView()
             let imageView = UIImageView(image: UIImage(named: imageName))
             imageView.contentMode = .scaleAspectFit
-            bgView.addSubview(bgView)
+            bgView.addSubview(imageView)
+            let titleLabel = UILabel()
+            titleLabel.text = title
+            titleLabel.font = UIFont.pingFangSCMedium(ofSize: 14)
+            titleLabel.textColor = color_19191C
+            bgView.addSubview(titleLabel)
+            let contentLabel = UILabel()
+            contentLabel.text = content
+            contentLabel.font = UIFont.pingFangSCMedium(ofSize: 13)
+            contentLabel.textColor = color_747475
+            bgView.addSubview(contentLabel)
+            imageView.snp.makeConstraints { make in
+                make.left.top.equalToSuperview()
+                make.height.width.equalTo(16)
+            }
+            titleLabel.snp.makeConstraints { make in
+                make.left.equalTo(imageView.snp.right).offset(6)
+                make.top.equalToSuperview()
+                make.right.equalToSuperview()
+            }
+            contentLabel.snp.makeConstraints { make in
+                make.left.equalTo(titleLabel)
+                make.top.equalTo(titleLabel.snp.bottom).offset(2)
+                make.right.equalToSuperview()
+            }
+            
             return bgView
         }
     }

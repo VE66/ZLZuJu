@@ -25,6 +25,11 @@ class ZJDetailViewController: UIViewController {
         }
     }
     
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        detailView.updateBottomView(self.view.safeAreaInsets.bottom)
+    }
+    
 
     /*
     // MARK: - Navigation
