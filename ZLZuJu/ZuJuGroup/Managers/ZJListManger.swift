@@ -6,12 +6,17 @@
 //
 
 import UIKit
-
+import HandyJSON
 class ZJListManger: NSObject {
     
     var lists: [ZJListModel] = []
 
     func getData(completion: @escaping ([ZJListModel])->Void) {
+        
+        Networking.shared.request(url: .zjList(free: "1", type: "1", pay: ZJPaymentType.sponsorPays.value, sex: "1", keyword: "", distance: "0", page: 1, limit: 10), modelType: ZJListModel.self) { data in
+            print("sssss")
+        }
+        
         var items: [ZJListModel] = []
         
         for _ in 0...3 {

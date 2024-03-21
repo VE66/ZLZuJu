@@ -7,18 +7,40 @@
 
 import UIKit
 
+extension ZJPublishThemeView: DateThemeProtocol {
+    func reloadThemeData(_ lists: [ZJDateTheme]) {
+        self.lists = lists
+    }
+    
+    
+}
+
 class ZJPublishThemeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    private let items: [ZJActivityType] = [.eat, .movie, .sing, .sport, .chat, .shopping, .travel, .custom]
-
+//    private let items: [ZJActivityType] = [.eat, .movie, .sing, .sport, .chat, .shopping, .travel, .custom]
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    
+    private var lists: [ZJDateTheme] = [] {
+        didSet {
+            self.reloadData()
+        }
+    }
+    
     @IBOutlet weak var themeCollection: UICollectionView! {
         didSet {
             themeCollection.register(ZJThemeCollectionCell.self, forCellWithReuseIdentifier: "cell_id")
             
             themeCollection.delegate = self
             themeCollection.dataSource = self
-            print("sssssss")
+            ZJDateThemeManager.shared.deleagete = self
         }
+    }
+    
+    func reloadData() {
+        themeCollection.reloadData()
+        self.layoutIfNeeded()
+        let contentSize = themeCollection.contentSize
+        collectionViewHeight.constant = contentSize.height
     }
     
     private func setButtonData(_ button: UIButton) {
@@ -78,38 +100,36 @@ class ZJPublishThemeView: UIView, UICollectionViewDelegate, UICollectionViewData
     var paymentType: ZJPaymentType?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        items.count
+        ZJDateThemeManager.shared.lists.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_id", for: indexPath) as! ZJThemeCollectionCell
-        let mode = items[indexPath.row]
+        let model = ZJDateThemeManager.shared.lists[indexPath.row]
         
-        cell.setdata(mode, isSelected: currentSelect == indexPath)
+        cell.setdata(model, isSelected: currentSelect == indexPath)
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! ZJThemeCollectionCell
-        cell.selected(true)
-        let decell = collectionView.cellForItem(at: currentSelect) as! ZJThemeCollectionCell
-        decell.selected(false)
-        currentSelect = indexPath
+        if currentSelect != indexPath {
+            let cell = collectionView.cellForItem(at: indexPath) as! ZJThemeCollectionCell
+            cell.isSelected = true
+            let decell = collectionView.cellForItem(at: currentSelect) as! ZJThemeCollectionCell
+            decell.isSelected = false
+            currentSelect = indexPath
+        }
     }
     
-    
-    
-    
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let model = ZJDateThemeManager.shared.lists[indexPath.row]
+//        let width = ZJThemeCollectionCell.getCellWidth(model.name)
+//        return CGSize(width: width, height: 28)
+//    }
 
 }
+
 
 class ZJThemeCollectionCell: UICollectionViewCell {
     
@@ -117,11 +137,25 @@ class ZJThemeCollectionCell: UICollectionViewCell {
     private let font_selectedColor = UIColor.white
     private let bg_normalColor = UIColor(hex: "#F7F7F7")
     private let bg_selectedColor = UIColor(hex: "#FF528D")
-
+    private static let titleFont = UIFont.pingFangSC(ofSize: 14)
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                titelLab.textColor = font_selectedColor
+                self.backgroundColor = bg_selectedColor
+            } else {
+                titelLab.textColor = font_normalColor
+                self.backgroundColor = bg_normalColor
+            }
+        }
+    }
+    
+    weak var model: ZJDateTheme?
     lazy var titelLab = {
        let lab = UILabel()
         lab.textAlignment = .center
-        lab.font = UIFont.pingFangSC(ofSize: 14)
+        lab.font = Self.titleFont
         lab.textColor = self.font_normalColor
         return lab
     }()
@@ -132,23 +166,26 @@ class ZJThemeCollectionCell: UICollectionViewCell {
         self.clipsToBounds = true
         self.addSubview(titelLab)
         titelLab.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(3)
+            make.bottom.equalTo(-3)
+            make.left.equalToSuperview().offset(9)
+            make.right.equalTo(-9)
         }
     }
     
-    func setdata(_ mode: ZJActivityType, isSelected: Bool) {
-        titelLab.text = mode.value
-        selected(isSelected)
+    func setdata(_ model: ZJDateTheme, isSelected: Bool) {
+        self.model = model
+        titelLab.text = model.name
+        self.isSelected = isSelected
     }
+
     
-    func selected(_ isSelected: Bool) {
-        if isSelected {
-            titelLab.textColor = font_selectedColor
-            titelLab.backgroundColor = bg_selectedColor
-        } else {
-            titelLab.textColor = font_normalColor
-            titelLab.backgroundColor = bg_normalColor
-        }
+    static func getCellWidth(_ title: String) -> CGFloat {
+        let lab = UILabel()
+        lab.font = self.titleFont
+        lab.text = title
+        lab.sizeToFit()
+        return lab.frame.width + 9 + 9
     }
     
     required init?(coder: NSCoder) {

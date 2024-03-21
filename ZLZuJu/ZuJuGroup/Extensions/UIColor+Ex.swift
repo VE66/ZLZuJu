@@ -77,3 +77,13 @@ let color_888888 = UIColor(hex: "#888888")
 let color_577CFF = UIColor(hex: "#577CFF")
 /// 橙色
 let color_FF7D36 = UIColor(hex: "#FF7D36")
+/// 背景白色
+let color_EEEFF2 = UIColor(hex: "#EEEFF2")
+/// line 颜色
+let color_EEEEEE = UIColor(hex: "#EEEEEE")
+/// 签到分红
+let color_FF6D9F = UIColor(hex: "#FF6D9F")
+/// 青色
+let color_34C900 = UIColor(hex: "#34C900")
+/// 蓝色
+let color_468AFF = UIColor(hex: "#468AFF")

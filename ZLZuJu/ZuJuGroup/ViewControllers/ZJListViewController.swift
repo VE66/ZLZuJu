@@ -11,27 +11,33 @@ class ZJListViewController: UIViewController {
     
     private var manager = ZJListManger()
     
+    lazy var zjlocalView = {
+        let view = ZJLocalView()
+        return view
+    }()
+    
     lazy var listView = {
         let view = ZJListView()
+        view.clipsToBounds = true
         return view
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        setRightBarItem()
+//        setRightBarItem()
         self.view.addSubview(listView)
+        self.view.addSubview(zjlocalView)
         listView.manager = manager
-        listView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        zjlocalView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.left.right.equalToSuperview()
+            make.height.equalTo(56)
         }
-    }
-    
-    func setRightBarItem() {
-        let btn = UIButton(type: .system)
-        btn.setTitle("筛选", for: .normal)
-        btn.addTarget(self, action: #selector(filterAction), for: .touchUpInside)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
+        listView.snp.makeConstraints { make in
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(zjlocalView.snp.bottom)
+        }
     }
     
     @objc func filterAction() {

@@ -12,7 +12,8 @@ target 'ZLZuJu' do
 	pod 'SnapKit'
 	pod 'HandyJSON'	
   pod 'Kingfisher'
-	
+  pod 'AFNetworking'
+
 
 end
 

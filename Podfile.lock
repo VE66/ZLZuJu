@@ -1,25 +1,42 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - HandyJSON (5.0.2)
   - Kingfisher (7.11.0)
   - SnapKit (5.7.1)
 
 DEPENDENCIES:
+  - AFNetworking
   - HandyJSON
   - Kingfisher
   - SnapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Kingfisher
-  trunk:
+    - AFNetworking
     - HandyJSON
+    - Kingfisher
     - SnapKit
 
 SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 61592f49861076507f03e523ba72ae97b13d1131
+PODFILE CHECKSUM: dbb9bb317d93cbab8620f62931122ed7c42e67ca
 
 COCOAPODS: 1.15.2

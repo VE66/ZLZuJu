@@ -21,8 +21,6 @@ enum ZJPaymentType {
             return "男A女免"
         case .AA:
             return "AA制"
-        default:
-            return ""
         }
     }
     
